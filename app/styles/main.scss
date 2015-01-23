@@ -6,19 +6,20 @@ html, body {
     width: 100%;
     height: 100%;
 }
-
 .icon {
     background-image:url(../images/sprite01.png);
     background-repeat:no-repeat;
     display: block;
 }
 header{
-    margin: 20px 0;
+    margin: 0px auto;
+    height: 107px;
 }
 #logo{
-    margin: 20px auto;
+    margin: 0px auto;
     width: 146px;
     height: 36px;
+    padding-top: 55px;
     .icon{
        background-position: -9px -10px; 
        width: 100%;
@@ -27,7 +28,7 @@ header{
 }
 #home{
     width: 100%;
-    height: 758px;
+    height: 695px;
 }
 #slider{
     width: 100%;
@@ -40,10 +41,12 @@ header{
             width: 80%;
             text-align: center;
             margin: 0 auto;
+            height: 254px;
             color: #666666;
             h3{
                 font-weight: normal;
                 font-size: 32px;
+                margin: 0px;
             }
             p{
                 font-size: 20px;
@@ -56,5 +59,102 @@ header{
             background-size: cover;
 
         }
+    }
+}
+#video{
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    .container{
+        width: 85%;
+        margin: 0 auto;
+        .text{
+            width: 100%;
+            height: 280px;
+            text-align: center;
+            color: #666;
+            h3{
+                font-weight: normal;
+                text-align: center;
+                font-size: 42px;
+                color: #666666;
+            }   
+            p{
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0 auto;
+                .hash{
+                    font-weight: bold;
+                }
+            }
+        }
+        .video_frame{
+                height: 460px;
+  width: 819px;
+  position: relative;
+  margin: 0 auto;
+              .hash{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                color: #c5c5c5;
+                font-size: 14px;
+                margin: 10px 15px;
+              }
+
+        }
+    }
+}
+#play{
+    width: auto;
+    height: 26px;
+    margin: 10px;
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: 45%;
+    .icon{
+        background-position: -113px -78px;
+        width: 26px;
+        height: 100%;
+        display: inline-block;      
+    }
+    p{
+        margin: 0px;
+        color: #fff;
+        font-size: 20px;
+        position: RELATIVE;
+        display: inline-block;
+        top: -7px;
+    }
+}
+#social{
+    margin: 60px auto;
+  padding: 0px;
+  height: 40px;
+  width: 200px;
+  position: relative;
+  /* top: 70px; */
+  text-align: center;
+    li{
+        width: 30px;
+        margin: 10px;
+        display: inline-block;
+        list-style-type: none;
+        a {
+            font-size: 30px;
+            .fa{
+                color:#d9d9d9;
+            }
+        }
+    }
+}
+#touch_experience{
+    height: 1128px;
+    width: 100%;
+    .container{
+        width: 980px;
+        margin: 0 auto;
     }
 }
