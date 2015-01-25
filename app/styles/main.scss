@@ -16,11 +16,13 @@ header{
     height: 107px;
 }
 #navigate{
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     width: 66px;
     height: auto;
+    background-color: #fff;
+    z-index: 100;
     .nav_item{
         //-349px -12px;
         width: 66px;
@@ -131,6 +133,8 @@ header{
     .container{
         width: 940px !important;
         margin: 0 auto !important;
+        position: relative;
+        z-index: 1;
     }
 }
 #slider{
@@ -532,6 +536,9 @@ header{
         }
         }
 }
+#gallery{
+    position: relative;
+}
 #gall{
     height: 600px;
     width: 100%;
@@ -544,7 +551,51 @@ header{
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        top: 0px;
+        top: 0px; 
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease-in-out;
+        &.showtime{
+            opacity: 1;
+            visibility: visible;            
+        }
+    }
+
+}
+#gall_btns{
+    width: 100%;
+    height: 66px;
+    position: absolute;
+    top: 50%;
+    margin: -36px 0;
+    .btn_gall{
+        //-349px -12px;
+        //background-size: 669px 453px;
+        display: block;
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        .icon{
+            display: block;
+            width: 66px;
+            height: 66px;
+        }
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    .next{
+        right: 0px;
+        .icon{
+            background-position: -349px -12px;
+        }
+    }
+    .prev{
+        left: 0px;
+        .icon{
+            background-position: -349px -12px;
+            transform:rotate(180deg);
+        }
     }
 }
 #footer{
@@ -573,13 +624,14 @@ header{
             font-style: italic;
         }
         .line{
-            display: inline-block;
+            display: block;
             background-position: -9px -28px;
             width: 40px;
             height: 1px;
             margin: 0 15px;
             position: relative;
-            top: -5px;
+            top: 16px;
+            margin: 0 auto;
         }
     }
 }
@@ -639,6 +691,12 @@ header{
     }
   }
 }
+@media only screen and (max-device-width: 2048px) and (-webkit-min-device-pixel-ratio: 2){
+    .icon{
+        background-image: url(../images/@2xsprite01.png);
+        background-size: 669px 453px;
+    }
+}
 @media only screen and(max-width: 960px){
     .section{
         .container{
@@ -649,42 +707,55 @@ header{
     #touch_experience{
         height: auto;
         padding-bottom: 30px;
-    }
-    #slider{
-
-    .item_slider{
-     
-        .slide_text{
-            width:90%;
+        .container{
+            .text{
+                height: auto;
+                margin: 40px auto;
+            }
         }
     }
+    #slider{
+        .slide_text{
+            width:90%;
+            margin: 50px auto;
+            height: auto;
+        }
+    }
+    #video{
+        .container{
+            .text{
+                height: auto;
+                margin: 50px auto;
+            }
+        }
     }
 }
 @media only screen and(max-width: 768px){
     #slider{
         width: 100%;
-        height: 100%;
+        height: auto;
         overflow: hidden;
+        .slide_text{
+            width: 570px;
+            text-align: center;
+            margin: 0 auto 50px;
+            height: auto;
+            color: #666666;
+        }
         .item_slider{
             width: 100%;
             height: auto;
-            .slide_text{
-                width: 570px;
-                text-align: center;
-                margin: 0 auto 50px;
-                height: auto;
-                color: #666666;
-                h3{
-                    font-weight: normal;
-                    font-size: 24px;
-                    margin: 0px;
-                    font-family: Georgia, serif;
-                    font-style: italic;
-                    margin:30px 0px;
-                }
-                p{
-                    font-size: 18px;
-                }
+            position: absolute;
+            h3{
+                font-weight: normal;
+                font-size: 24px;
+                margin: 0px;
+                font-family: Georgia, serif;
+                font-style: italic;
+                margin:30px 0px;
+            }
+            p{
+                font-size: 18px;
             }
         }
     }
@@ -723,7 +794,7 @@ header{
         }
     }
     #qrcode{
-        padding-top: 40px;
+        padding-top: 60px;
     }
     #goforride {
         .failingfast{
@@ -744,7 +815,7 @@ header{
         }
     }
     #home{
-        height: auto;
+        height: 695px;
     }
 }
 @media only screen and(max-width: 570px){
@@ -819,7 +890,7 @@ header{
    
     #qrcode{
         height: auto;
-        padding: 40px;
+        padding: 40px 0px;
         #iconqr{
             background-position: -384px -150px;
             width: 130px;
@@ -838,11 +909,11 @@ header{
         }
     }
     #logo{
-        padding-top: 15px;
+        padding-top: 85px;
     }
     #navigate{
         width: 100%;
-        position: relative;
+        position: fixed;
         height: 66px;
         .nav_item{
             width: 33.3%;
@@ -859,11 +930,11 @@ header{
 }
 @media only screen and(max-width: 320px){
     #logo{
-        padding-top: 15px;
+        padding-top: 85px;
     }
     #navigate{
         width: 100%;
-        position: relative;
+        position: fixed;
         height: 66px;
 
         .nav_item{
@@ -941,7 +1012,7 @@ header{
     }
     #qrcode{
         height: auto;
-        padding: 40px;
+        padding: 40px 0px;
         #iconqr{
             background-position: -384px -150px;
             width: 130px;
@@ -967,10 +1038,13 @@ header{
         }
     } 
     #slider{
+        height: 900px;
+        .slide_text{
+            width: 280px !important;
+            height: auto;
+        }
         .item_slider {
-            .slide_text{
-                width: 280px;
-                }
+            
             .img_slide{
                 div{
                     background-position: 30% 0px;
