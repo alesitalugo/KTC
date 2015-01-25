@@ -15,6 +15,57 @@ header{
     margin: 0px auto;
     height: 107px;
 }
+#navigate{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+   
+    .nav_item{
+        //-349px -12px;
+        width: 66px;
+        height: 66px;
+        display: block;
+        position: relative;
+        border: 1px solid red;
+        .icon{
+            margin: 17px 23px;
+        }
+    }
+}
+#close {
+    .icon{
+        background-position: -34px -86px;
+        width: 25px;
+        height: 28px;
+    }
+}
+#a_l{
+    .icon{
+        background-position: -40px -149px;
+        width: 16px;
+        height: 31px;
+    }
+    &:hover{
+        background-color: #666;
+
+    }
+    &:hover > .icon{
+        background-position: -440px -29px;
+    }
+}
+#a_r{
+    .icon{
+        background-position: -298px -15px;
+        width: 16px;
+        height: 31px;
+    }
+    &:hover{
+        background-color: #666;
+    }
+    &:hover > .icon{
+        background-position: -474px -29px;
+    }
+}
 #logo{
     margin: 0px auto;
     width: 146px;
@@ -30,6 +81,12 @@ header{
     width: 100%;
     height: 695px;
 }
+.section{
+    .container{
+        width: 940px !important;
+        margin: 0 auto !important;
+    }
+}
 #slider{
     width: 100%;
     height: 100%;
@@ -43,6 +100,7 @@ header{
             margin: 0 auto;
             height: 254px;
             color: #666666;
+            width: 910px;
             h3{
                 font-weight: normal;
                 font-size: 32px;
@@ -60,8 +118,17 @@ header{
             height: 440px;
             width: 100%;
             display: inline-block;
-            background-size: cover;
+            position: relative;
+            div{
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  position: absolute;
+                  top: 0px;
 
+            }
         }
     }
 }
@@ -71,8 +138,7 @@ header{
     background-color: #f7f7f7;
     overflow: hidden;
     .container{
-        width: 85%;
-        margin: 0 auto;
+     
         .text{
             width: 100%;
             height: 280px;
@@ -98,10 +164,10 @@ header{
             }
         }
         .video_frame{
-                height: 460px;
-  width: 819px;
-  position: relative;
-  margin: 0 auto;
+            height: 460px;
+            width: 819px;
+            position: relative;
+            margin: 0 auto;
               .hash{
                 position: absolute;
                 top: 0px;
@@ -122,6 +188,7 @@ header{
     display: block;
     top: 45%;
     left: 45%;
+    cursor: pointer;
     .icon{
         background-position: -113px -78px;
         width: 26px;
@@ -135,6 +202,8 @@ header{
         position: RELATIVE;
         display: inline-block;
         top: -7px;
+        font-family: Georgia, sans-serif;
+        font-style: italic;
     }
 }
 #social{
@@ -163,7 +232,6 @@ header{
     width: 100%;
     .container{
         width: 980px;
-        margin: 0 auto;
         .text{
             width: 100%;
             height: 280px;
@@ -203,8 +271,7 @@ header{
     width: 100%;
     height: 670px;
     .container{
-        width: 85%;
-        margin: 0 auto;
+       
         text-align: center;
        .quote{
             width: auto;
@@ -255,11 +322,25 @@ header{
     text-align: center;
     margin: 0 auto;
     padding-top: 80px;
-    .icon{
+    position: relative;
+    #iconqr{
         width: 170px;
         height: 170px;
         margin: 0 auto;
         background-position: -38px -233px;
+        .txt{
+              color: #cec1a2;
+              font-size: 50px;
+              position: absolute;
+              top: 37%;
+              display: none;
+              font-family: Georgia, sans-serif;
+              font-style: italic;
+              background-color: #f7f7f7;
+              padding: 20px;
+              left: 49%;
+
+        }
     }
     .top{
         background-position:  -16px -213px;
@@ -274,8 +355,7 @@ header{
 }
 #goforride{
     .container{
-        width: 85%;
-        margin: 0 auto;
+        
         text-align: center;
     .text{
             width: 100%;
@@ -339,8 +419,7 @@ header{
     width: 100%;
     background-color: #cec1a2;
     .container{
-        width: 85%;
-        margin: 0 auto;
+        
         text-align: center;
         h3{
              font-weight: normal;
@@ -365,4 +444,372 @@ header{
             width: 33.3%;
             float: left;
         }
+}
+#gall{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    .item_gall{
+        background-image: url(../images/img04.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0px;
+    }
+}
+#footer{
+    height: 400px;
+    width: 100%;
+    background-color: #292929;
+    .container{
+        overflow: hidden;
+        text-align: center;
+        padding-top: 90px;
+        p{
+            width: 100%;
+            color: #cec1a2;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 32px;
+            text-align: center;
+        }
+        .director{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+        .line{
+            display: inline-block;
+            background-position: -9px -28px;
+            width: 40px;
+            height: 1px;
+            margin: 0 15px;
+            position: relative;
+            top: -5px;
+        }
+    }
+}
+
+
+@media only screen and(max-width: 960px){
+    .section{
+        .container{
+        width: 90% !important;
+        margin: 0 auto !important;
+        }
+    }
+    #touch_experience{
+        height: auto;
+        padding-bottom: 30px;
+    }
+    #slider{
+
+    .item_slider{
+     
+        .slide_text{
+            width:90%;
+        }
+    }
+    }
+}
+@media only screen and(max-width: 768px){
+    #slider{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .item_slider{
+            width: 100%;
+            height: auto;
+            .slide_text{
+                width: 570px;
+                text-align: center;
+                margin: 0 auto 50px;
+                height: auto;
+                color: #666666;
+                h3{
+                    font-weight: normal;
+                    font-size: 24px;
+                    margin: 0px;
+                    font-family: Georgia, serif;
+                    font-style: italic;
+                    margin:30px 0px;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    #video{
+        .container{
+            .text{
+                h3{
+                    width: 450px;
+                    margin: 50px auto;
+                }
+            }
+            .video_frame{
+                width: 100% ;
+                margin: 70px 0px 0px ;
+                height: auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #goforride{
+        .container{
+            .pointer{
+                width: 95%;
+                img{
+                    width: 100%;
+                }
+            }
+        }  
+    } 
+    .section{
+        .container{
+            width: 570px !important;
+            margin: 0 auto !important;
+        }
+    }
+    #qrcode{
+        padding-top: 40px;
+    }
+    #goforride {
+        .failingfast{
+            width: 100%;
+        }
+    }
+    #graphic{
+        width: 100%;
+    }
+    #footer{
+        .container{
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+    #home{
+        height: auto;
+    }
+}
+@media only screen and(max-width: 570px){
+    .section{
+        .container{
+            width: 95% !important;
+            margin: 0 auto !important;
+        }
+    }
+    #slider{
+        .item_slider {
+            .slide_text{
+                width: 95%;
+                }
+        }
+    } 
+    #touch_experience{
+        .container{ 
+            .text{
+                height: auto;
+            }
+        }
+    } 
+    #goforride {
+        .container{
+            .text{
+                height: auto;
+            }  
+        } 
+    }
+    #video{
+        .container{
+            .text{
+                height: auto;
+                h3{
+                    width: 95%;
+                }
+            }
+            .video_frame{
+                height: auto;
+                margin: 30px auto;
+                img{
+                    display: none;
+                }
+            }
+            .hash{
+                display: none;
+            }
+        }
+    }
+    #play{
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        top:0px;
+        left: 0px;
+        .icon{
+            background-position: -113px -78px;
+            width: 26px;
+            height: 46px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    #graphic{
+      .item_graph{
+        width: 100%;
+        float: none;
+        margin: 15px 0;
+      }  
+    } 
+    #qrcode{
+        height: auto;
+        padding: 40px;
+        #iconqr{
+            background-position: -384px -150px;
+            width: 130px;
+            height: 250px;
+            .txt{
+                display: block;
+            }
+        }
+    }
+    #mobilefirst{
+        height: auto;
+        .container{
+            .quote{
+                padding-top: 35px;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 320px){
+    .section{
+        .container{
+            width: 280px !important;
+            margin: 0 auto !important;
+        }
+    }
+    #video{
+        .container{
+            .text{
+                height: auto;
+                h3{
+                    width: 95%;
+                }
+            }
+            .video_frame{
+                height: auto;
+                margin: 30px auto;
+                img{
+                    display: none;
+                }
+            }
+            .hash{
+                display: none;
+            }
+        }
+    }
+    #play{
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        top:0px;
+        left: 0px;
+        .icon{
+            background-position: -113px -78px;
+            width: 26px;
+            height: 46px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    #touch_experience{
+        .container{ 
+            .text{
+                height: auto;
+            }
+
+        }
+    } 
+    #mobilefirst{
+        background-color: #f7f7f7;
+        width: 100%;
+        height: 670px;
+        .container{
+            text-align: center;
+            .quote{
+                .line:first-child{
+                    display: none;
+                }
+                .line{
+                    display: block;
+                    margin: 20px auto 0px;
+                    position: relative;
+                    top: -5px;
+                }
+            }
+        }
+    }
+    #qrcode{
+        height: auto;
+        padding: 40px;
+        #iconqr{
+            background-position: -384px -150px;
+            width: 130px;
+            height: 250px;
+            .txt{
+                display: block;
+            }
+        }
+    }
+    #mobilefirst{
+        height: auto;
+        .container{
+            .quote{
+                padding-top: 35px;
+            }
+        }
+    }
+    #goforride{
+        .container {
+            .text{
+                height: auto;
+            }
+        }
+    } 
+    #slider{
+        .item_slider {
+            .slide_text{
+                width: 280px;
+                }
+            .img_slide{
+                div{
+                    background-position: 30% 0px;
+                }
+            }
+        }
+    } 
+    #footer{
+        .container{
+            padding-top: 30px;
+        } 
+    }
+    #graphic{
+      .item_graph{
+        width: 100%;
+        float: none;
+        margin: 15px 0;
+      }  
+    } 
 }
