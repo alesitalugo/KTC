@@ -15,6 +15,7 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/animate.min.css">
         <!-- endbuild -->
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -63,19 +64,22 @@
                 </div>
 
             </section>
-            <section id="video" class="section animate_fadein">
+            <section id="video" class="section">
                 <div class="container">
                     <div class="text">
                         <h3>who needs fans when you´ve got advocates?</h3>
                         <p>In automotive it’s people making the brand, for 80% of consumers trust friends in their buying decision. We brought to life the concept <span class="hash">#AsíSoyYo</span> (ThisIsMe) to involve clients in the brand and promote User Generated Content on Facebook, Instagram and Twitter.
                         The result? Suzuki has connected with enthusiasts, converting them into advocates convincing new potential customers.</p>
                     </div>
-                    <div class="video_frame">
-                        <span class="hash">#AsíSoyYo</span>
-                        <img src="images/video01.png">
-                        <a id="play"><span class="icon" ></span> <p>watch video</p></a>
+                    <div id="video_frame" class="video_frame animate_fadein">
+                        <div class="placeholder">
+                            <span class="hash">#AsíSoyYo</span>
+                            <img src="images/video01.png">
+                            <a id="play"><span class="icon" ></span> <p>watch video</p></a>
+                        </div>
+                        <div id="youtube"><iframe></iframe></div>
                     </div>
-                    <ul id="social">    
+                    <ul id="social" class="animate_fadein">
                         <li><a href="" id="fb"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="" id="in"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="" id="tw"><i class="fa fa-twitter"></i></a></li>
@@ -90,7 +94,7 @@
                         <p>Branded Webpages, YouTube, Facebook, mobile, car dealership… the customer path to purchase has an average of 18 touchpoints.
                         For Suzuki these are 18 opportunities converted into meaningful experiences. With incredible design, great content, and fast response times we’ve delivered compelling buying journey.  The Suzuki experience is smooth and always available.</p>
                     </div>
-                    <div class="devices">
+                    <div id="devices" class="devices animate_fadein">
                         <img src="images/img02.png">
                     </div>
                 </div>
@@ -102,7 +106,7 @@
                     <h3>Putting mobile first</h3>
                     <p>Automotive is about mobility… and so is the digital era. One of the most revolutionary insights that encourages digital transformation rests on this simple truth: 40% of internet traffic comes from mobile devices. We tailored mobile experiences–just like cars do.
                     With responsive websites, Instagram, dealer app, Snapchat.</p>
-                    <div id="qrcode">
+                    <div id="qrcode" class="animate_fadein">
                         <div class="top icon"></div>
                         <div class="icon" id="iconqr">
                             <span class="txt">40%</span>
@@ -117,7 +121,7 @@
                         <h3>Who wants to go for a ride?</h3>
                         <p>Ordering a test drive online is nothing new. But in an industry where 94% of  customer journeys start online,we dared set the bar a bit higher and created <span class="hash">Instant Drive</span>, a location-based delivery service that allows people to order a demo car online easily and have it at their door in less than one hour. The car of your dreams, just one click away.</p>
                     </div>
-                    <div class="pointer">
+                    <div id="instantdrive" class="pointer animate_fadein">
                         <img src="images/img03.png">
                     </div>
                         <div class="quote">
@@ -209,7 +213,7 @@
         <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <script src="scripts/parallax.js"></script>
+        <script src="scripts/fade_in_section.js"></script>
         <!-- endbuild -->
 </body>
 </html>
