@@ -27,35 +27,42 @@
 
         <div id="wrap">
             <header>
-                <div id="logo">
-                    <span class="icon"></span>
-                </div>
+                
                 <nav id="navigate">
                     <a class="nav_item" id="close">
                         <span class="icon"></span>
                     </a>
-                    <a class="nav_item" id="a_l">
-                        <span class="icon" ></span>
-                        <div class="active_btn">
-                            <p></p>
-                        </div>
-                    </a>
-                    <a class="nav_item" id="a_r">
+                    <a class="nav_item prev" id="a_r">
                         <span class="icon"></span>
                         <div class="active_btn">
-                            <p></p>
+                            <p>prev case study PROFUTURO</p>
                         </div>
                     </a>
+                    <a class="nav_item next" id="a_l">
+                        <span class="icon" ></span>
+                        <div class="active_btn">
+                            <p>next case study PROFUTURO</p>
+                        </div>
+                    </a>
+                    
                 </nav>
+                <div id="logo">
+                    <span class="icon"></span>
+                </div>
             </header>
             <section id="home" class="section animate_fadein">
                 <div id="slider">
-                    <div class="item_slider">
-                        <div class="slide_text">
+                <div class="slide_text">
                             <h3>Driving Suzuki’s way of life into a digital future</h3>
                             <p>Suzuki Motor Mexico partnered with ktc to engage with digital consumers.Together with the brand, we built a roadmap for an integrated buying experience through customer journey analysis,new digital touchpoints, brand advocacy, and dealer integration. The brand embraced a new paradigm to the future.</p>
                         </div>
+                    <div class="item_slider showtime">
+                       
                         <div class="img_slide"> <div style="background-image:url(../images/img01.jpg);"></div></div>                        
+                    </div>
+                    <div class="item_slider">
+                        
+                        <div class="img_slide"> <div style="background-image:url(../images/slideimg01.png);"></div></div>                        
                     </div>
                 </div>
 
@@ -130,13 +137,19 @@
                 <div class="container">
                     <h3>Smile-provoking results</h3>
                     <div id="graphic">
-                        <div class="item_graph">    
-                            <div class="circle">
-                                <div class="text">
-                                    <p>+28% </p>
-                                    <span>POSITIVE EXPERIENCE</span>
-                                </div>
+                        <div class="item_graph">    <div id="cont" data-pct="28">
+                                <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                  <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                                  <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                                <div class="circle">
+                                    <div class="text">
+                                        <p>+28% </p>
+                                        <span>POSITIVE EXPERIENCE</span>
+                                    </div>
+                                </div>                                
                             </div>
+                            
                         </div>
                         <div class="item_graph">
                             <div class="inline">
@@ -147,12 +160,18 @@
                             </div>
                         </div>
                         <div class="item_graph">
-                            <div class="circle">
-                                <div class="text">
-                                    <p>+146% </p>
-                                    <span>SALES RATE</span>
-                                </div>
-                            </div>                        
+                            <div id="cont" data-pct="28">
+                                <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                  <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                                  <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                                <div class="circle">
+                                    <div class="text">
+                                        <p>+146% </p>
+                                        <span>SALES RATE</span>
+                                    </div>
+                                </div>                 
+                            </div>                                   
                         </div>
                     </div>
                 </div>

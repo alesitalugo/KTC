@@ -1,33 +1,41 @@
 console.log('\'Allo \'Allo!');
 
-var sliderhome = function(el){
-	
-	var slide_total = $('.item_slider').length;
-	var slide_actual = 1;
+var Slider = function(el){
+	var slides = $(el).find('.item_slider');
+	var slide_total = slides.length;
+	var slide_actual = 0;
 
-	'init': function(){
-		$(slide_length).first().addClass('active_slide');
-	},
-	'next': function(){
-		if(slide_actual +1 <= slide_total){
-			$(slide_total).last().fadeOut(500, function(){
+
+	return{
+		'init': function(){
+			slides.first().addClass('active_slide');
+		},
+		'next_slide': function(){
+			if( slide_actual + 1 < slide_total ){
+				$( slides[ slide_actual ] ).removeClass('showtime');
+				$( slides[slide_actual + 1 ] ).addClass('showtime')
 				slide_actual++;
-			});
-		} else {
-			$(slide_actual).fadeIn(500, function(){
-				slide_actual= 1;
-			});
-		}
-	},
-	'prev': function(){
-		if(slide_actual -1 == 0){
-			$(slide_length).last().fadeOut(500, function(){
-				slide_actual = slide_length;
-			});
-		} else {
-			$(slide_actual).fadeOut(500, function(){
-				slide_actual --;
-			});
+			}
+		},
+		'prev_slide': function(){
+			if( slide_actual - 1 >= 0 ){
+				$( slides[ slide_actual ] ).removeClass('showtime');
+				$( slides[slide_actual - 1 ] ).addClass('showtime');
+				slide_actual--;
+			}
 		}
 	}
 };
+
+
+var slider_home = new Slider( document.getElementById('slider') )
+
+slider_home.init();
+$('.nav_item').on('click', function( e ){
+	e.preventDefault();
+	if( $(this).hasClass('next') )
+		slider_home.next_slide();
+	if( $(this).hasClass('prev') )
+		slider_home.prev_slide();
+	return false;
+});
