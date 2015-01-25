@@ -342,9 +342,9 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'sass',
-                'copy:styles',
-                'imagemin',
-                'svgmin'
+                'copy:styles'
+                //'imagemin',
+                //'svgmin'
             ]
         }
     });
@@ -394,8 +394,8 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'rev',
-        'usemin',
-        'htmlmin'
+        'usemin'
+        //'htmlmin'
     ]);
 
     grunt.registerTask('default', [

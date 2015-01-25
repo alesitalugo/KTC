@@ -1,5 +1,5 @@
-console.log('\'Allo \'Allo!');
-
+'use strict';
+/* jshint camelcase: false */
 var Slider = function(el){
 	var slides = $(el).find('.item_slider');
 	var slide_total = slides.length;
@@ -13,7 +13,7 @@ var Slider = function(el){
 		'next_slide': function(){
 			if( slide_actual + 1 < slide_total ){
 				$( slides[ slide_actual ] ).removeClass('showtime');
-				$( slides[slide_actual + 1 ] ).addClass('showtime')
+				$( slides[slide_actual + 1 ] ).addClass('showtime');
 				slide_actual++;
 			}
 		},
@@ -24,18 +24,20 @@ var Slider = function(el){
 				slide_actual--;
 			}
 		}
-	}
+	};
 };
 
 
-var slider_home = new Slider( document.getElementById('slider') )
+var slider_home = new Slider( document.getElementById('slider') );
 
 slider_home.init();
 $('.nav_item').on('click', function( e ){
 	e.preventDefault();
-	if( $(this).hasClass('next') )
+	if( $(this).hasClass('next') ){
 		slider_home.next_slide();
-	if( $(this).hasClass('prev') )
+	}
+	if( $(this).hasClass('prev') ){
 		slider_home.prev_slide();
+	}
 	return false;
 });

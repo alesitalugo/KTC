@@ -115,6 +115,19 @@ header{
     height: 695px;
 }
 .section{
+    &.animate_fadein{
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+    }
+    &.showtime{
+        display: block;
+        opacity: 1;
+        visibility: visible;   
+    }
     .container{
         width: 940px !important;
         margin: 0 auto !important;
