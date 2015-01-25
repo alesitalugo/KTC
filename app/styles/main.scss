@@ -637,7 +637,15 @@ header{
     }
 }
 
-
+#svg_2 circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #baae90;
+  stroke-width: 1em;
+}
+#svg_2 #bar2 {
+  stroke: #ffffff;
+}
 #svg circle {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;

@@ -24,6 +24,9 @@ var fade_in_section = function( $el, direction ){
 	if( $el.attr('id') === 'home' ){
 		animation = 'fadeIn';
 	}
+	if( $el.attr('id') === 'results'){
+		
+	}
 	if( $el.is_on_screen() ) {
 		if( !animated_sections[ $el.attr('id') ] ){
 			$el.addClass('animated '+animation);
