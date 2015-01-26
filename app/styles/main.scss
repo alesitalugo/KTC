@@ -305,6 +305,8 @@ header{
                 font-family: 'Lato', sans-serif;
                 font-weight: bold;
                 text-transform: uppercase;
+                  margin: 0px;
+            padding-top: 40px;
             }   
             p{
                 font-size: 20px;
@@ -733,6 +735,7 @@ header{
         background-size: 669px 453px;
     }
 }
+
 @media only screen and(max-width: 960px){
     .section{
         .container{
