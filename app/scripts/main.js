@@ -95,10 +95,14 @@ $('#gall').on('swiperight', function( e ){
 
 $('#play').on('click', function(e){
 	e.preventDefault();
-	$('#video_frame .placeholder').hide();
-	$('#video_frame iframe').fadeIn().attr('src', '//www.youtube.com/embed/MHAaaFb-Ax0?version=3&enablejsapi=1&autoplay=1&playsinline=0&controls=2&modestbranding=0&rel=0&showinfo=0&fs=0&autohide=0&color=white');
+	$('.video_modal .placeholder').hide();
+	$('.video_modal').fadeIn(500);
+	$('.video_modal iframe').fadeIn().attr('src', '//www.youtube.com/embed/MHAaaFb-Ax0?version=3&enablejsapi=1&autoplay=0&playsinline=0&controls=2&modestbranding=0&rel=0&showinfo=0&fs=0&autohide=0&color=white');
 });
-
+$('.video_modal').on('click', function(e){
+	e.preventDefault();	
+	$(this).fadeOut(500);
+});
   var val_1 = 28;
   var $circle = $('#svg #bar');
  
