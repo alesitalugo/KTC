@@ -7,9 +7,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="favicon.ico">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
 
-        <link rel="stylesheet" href="styles/a30c8cd3.main.css"/>
+        <link rel="stylesheet" href="styles/b4322742.main.css"/>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -80,7 +95,7 @@
                     </ul>
                 </div>
             </section>
-            <section id="touch_experience" class="section animate_fadein">
+            <section id="touch_experience" class="section">
                 <div class="container">
                     <div class="text">
                         <h3>Multiple touchpoints, multiple experiences </h3>
@@ -130,7 +145,7 @@
                 <div class="container">
                     <h3>Smile-provoking results</h3>
                     <div id="graphic">
-                        <div class="item_graph">    <div id="cont" data-pct="28">
+                        <div id="graph1" class="item_graph animate_fadein">    <div id="cont" data-pct="28">
                                 <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                   <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
                                   <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
@@ -144,19 +159,19 @@
                             </div>
                             
                         </div>
-                        <div class="item_graph">
+                        <div id="graph2" class="item_graph animate_fadein">
                             <div class="inline">
-                                <p>1500 <span>per month</span></p>
+                                <p><span id="graph_count">1500</span><span class="legend">per month</span></p>
                                 
                                 <span class="icon" id="graph"></span>
                                 <span class="request">FINANCING REQUEST</span>
                             </div>
                         </div>
-                        <div class="item_graph">
-                            <div id="cont" data-pct="28">
-                                <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <div id="graph3" class="item_graph animate_fadein">
+                            <div id="cont" data-pctr="46">
+                                <svg id="svg_2" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                   <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
-                                  <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                                  <circle id="bar2" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
                                 </svg>
                                 <div class="circle">
                                     <div class="text">
@@ -171,11 +186,11 @@
             </section>
             <section id="gallery" class="section">
                 <div id="gall">
-                    <div class="item_gall">
+                    <div class="item_gall" style=" background-image: url(images/img04.png);">
                     </div>
-                    <div class="item_gall">
+                    <div class="item_gall" style="background-image:url(images/slideimg01.png);">
                     </div>
-                    <div class="item_gall">
+                    <div class="item_gall" style="background-image:url(images/img01.jpg);">
                     </div>
                 </div>
                 <nav id="gall_btns">
@@ -196,10 +211,14 @@
                 </div>
             </section>
         </div>
+        <div class="video_modal">
+            <div class="content">
+                <div id="youtube_m"><iframe></iframe></div>
 
-
+            </div>
+        </div>
         <script src="scripts/cc3d8fa5.vendor.js"></script>
-        <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-        <script src="scripts/455d5bf3.main.js"></script>
+        <script src="scripts/jquerymobile.js"></script>
+        <script src="scripts/e55cc031.main.js"></script>
 </body>
 </html>
