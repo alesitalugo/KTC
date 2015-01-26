@@ -11,19 +11,19 @@ var Slider = function(el){
 
 	return{
 		'init': function(){
-			slides.first().addClass('showtime');
+			slides.first().show();
 		},
 		'next_slide': function(){
 			if( slide_actual + 1 < slide_total ){
-				$( slides[ slide_actual ] ).removeClass('showtime');
-				$( slides[slide_actual + 1 ] ).addClass('showtime');
+				$( slides[ slide_actual ] ).fadeOut('500');
+				$( slides[slide_actual + 1 ] ).fadeIn('500');
 				slide_actual++;
 			}
 		},
 		'prev_slide': function(){
 			if( slide_actual - 1 >= 0 ){
-				$( slides[ slide_actual ] ).removeClass('showtime');
-				$( slides[slide_actual - 1 ] ).addClass('showtime');
+				$( slides[ slide_actual ] ).fadeOut('500');
+				$( slides[slide_actual - 1 ] ).fadeIn('500');
 				slide_actual--;
 			}
 		}
@@ -43,13 +43,44 @@ $('#right_gall').on('click', function( e ){
 	slider_home.prev_slide();
 });
 
-$('.nav_item').on('click', function( e ){
+
+var SliderArrows = function(el){
+	var slides = $(el).find('.section');
+	var slide_total = slides.length;
+	var slide_actual = 0;
+
+	return{
+		'init': function(){
+				$("html, body").stop().animate({ scrollTop: ($('#home').offset().top ) }, 1000);
+		},
+		'next_slidearrow': function(){
+			if( slide_actual + 1 < slide_total ){
+				
+				$("html, body").stop().animate({ scrollTop: ( $( slides[slide_actual + 1 ] ).offset().top ) }, 1000);
+				slide_actual++;
+			}
+		},
+		'prev_slidearrow': function(){
+			if( slide_actual - 1 >= 0 ){
+
+				$("html, body").stop().animate({ scrollTop: ($( slides[slide_actual -1  ] ).offset().top ) }, 1000);
+				slide_actual--;
+			}
+		}
+	};
+};
+var slider_nav = new SliderArrows( document.getElementById('wrap') );
+
+slider_nav.init();
+
+$('#a_l').on('click', function( e ){
 	e.preventDefault();
-	if( $(this).hasClass('next') )
-		$(this).find('active_btn').show();
-	if( $(this).hasClass('prev') )
-		$(this).find('active_btn').show();
-	return false;
+	console.log('hola');
+	slider_nav.next_slidearrow();
+});
+$('#a_r').on('click', function( e ){
+	e.preventDefault();
+	slider_nav.prev_slidearrow();
 });
 
 $('#gall').on('swipeleft', function( e ){
@@ -69,15 +100,11 @@ $('#play').on('click', function(e){
 });
 
   var val_1 = 28;
-  
-
   var $circle = $('#svg #bar');
  
   if (isNaN(val_1)) {
-   val_1 = 100; 
-
-  }
-  else{
+	val_1 = 100; 
+  }else{
     var r = $circle.attr('r');
     var c = Math.PI*(r*2);
    
@@ -95,7 +122,6 @@ $('#play').on('click', function(e){
 
   if (isNaN(val_2)) {
    val_2 = 100; 
-
   }
   else{
     var q = $circles.attr('r');

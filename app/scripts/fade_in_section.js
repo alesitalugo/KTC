@@ -25,7 +25,7 @@ var fade_in_section = function( $el, direction ){
 		animation = 'fadeIn';
 	}
 	if( $el.attr('id') === 'results'){
-		
+
 	}
 	if( $el.is_on_screen() ) {
 		if( !animated_sections[ $el.attr('id') ] ){
