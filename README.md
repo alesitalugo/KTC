@@ -4,7 +4,7 @@
 Test project for the KTC Agency.
 
 ## Installation
-To only see the static files of the build we can direct download it[from here](https://codeload.github.com/alesitalugo/KTC/zip/gh-pages) and then open the `index.html` file from our browser.
+To only see the static files of the build we can direct download it [from here](https://codeload.github.com/alesitalugo/KTC/zip/gh-pages) and then open the `index.html` file from our browser.
 
 Or,
 
